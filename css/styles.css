@@ -1,0 +1,129 @@
+body {
+    color: #444;
+    font-family: Tahoma;
+    display: flex;
+    height: 96vh;
+  }
+  
+  #app {
+    width: 512px;
+    margin: auto;
+    box-shadow: 4px 4px 20px #888;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  #appLoading{
+    width: 512px;
+    margin: auto;
+    box-shadow: 4px 4px 20px #888;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  #authForm {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .classFont {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  #logo {
+    width: 70%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .startHidden {
+    display: none;
+  }
+  
+  h3 {
+    margin: 4px;
+    font-weight: normal;
+  }
+  
+  input {
+    width: 80%;
+    margin: 4px;
+    padding: 4px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 50%;
+  }
+  
+  button {
+    background-color: rgb(17, 19, 90);
+    font-size: 15px;
+    color: white;
+    padding: 4px;
+    margin: 4px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+  }
+  
+  button:hover {
+    opacity: 0.75;
+    cursor: pointer;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  .alternative {
+    background-color: rgb(72, 166, 249);
+  }
+  
+  .danger {
+    background-color: rgb(192, 23, 23);
+  }
+  
+  #loading {
+    position: absolute;
+    top: calc(50% - 250px);
+    left: calc(50% - 250px);
+    z-index: 1;
+  }
+  
+  #auth img {
+    cursor: pointer;
+    margin: 4px;
+  }
+  
+  #auth img:hover {
+    opacity: 0.75;
+  }
+  
+  #userImg {
+    height: 50px;
+    border-radius: 100%;
+  }
+  #userInfo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+  }
+  
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  #todoCount{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+  }
+  

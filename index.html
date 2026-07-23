@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>MyTasks</title>
+        <link rel="shortcut icon" href="img/myTasksFavicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="css/styles.css">
+      </head>
+<body>
+  <!--Carregando-->
+  <div id="loading" class="center">
+    <img src="img/loading.gif">
+  </div>
+
+  <div id="app">
+    <!--Logotipo do TodoList-->
+    <div class="center">
+      <img id="logo" src="img/myTasks.png">
+    </div>
+
+    <div id="addTarefa"class="center">
+      <!--Formulário de tarefas-->
+      <form id="todoForm">
+        <h3 id="todoFormTitle">Adicionar tarefa:</h3>
+        <label for="name">Tarefa: </label>
+        <input type="text" id="name" name="name" placeholder="Tarefa" autocomplete="off">
+        <button type="submit" id="submitTodoForm">Adicionar tarefa</button>
+      </form>
+      <hr>
+    </div>
+    <br>
+
+
+      <!--Lista de tarefas do usuário-->
+      <div id="todoList">
+        <h3 id="todoCount">Carregando tarefas...</h3>
+        <div id="buscas" class="center">
+          <label for="search">Buscar: </label>
+          <input type="text" placeholder="Buscar" id="search">
+        </div>
+        <ul id="ulTodoList"></ul>
+      </div>
+  
+ 
+    <!--Conteúdo destinado para usuários não autenticados-->
+    <div id="auth" class="center">
+      <!--Formulário de autenticação-->
+      <form id="authForm">
+        <h3 id="authFormTitle">Acessar sua conta</h3>
+
+        <br>
+
+        <p>
+        <label for="email">E-mail: </label>
+        <input type="email" id="email" name="email" placeholder="E-mail" autocomplete="email">
+        </p>
+
+        <p>
+        <label for="password">Senha: </label>
+        <input type="password" placeholder="Senha" id="password">
+        </p>
+
+        <button type="submit" id="submitAuthForm">Acessar</button>
+      </form>
+
+    </br>
+      <!--Possibilita a redefiniação de senha-->
+      <p id="passwordReset">
+        Esqueceu a senha?
+        <button class="alternative" onclick="sendPasswordResetEmail()">Redefinir senha</button>
+      </p>
+
+      <!--Alternar o fomulário de autenticação para o cadastro de novas contas-->
+      <p id="register">
+        Não possui uma conta?
+        <button onclick="toggleToRegister()" class="alternative">Cadastrar</button>
+      </p>
+
+      <!--Alternar o fomulário de autenticação para o acesso de contas já existentes-->
+      <p id="access" class="startHidden">
+        Já possui uma conta?
+        <button onclick="toggleToAccess()" class="alternative">Acesse</button>
+      </p>
+
+      <!--Outros provedores de autenticação-->
+      <br>
+      <p>
+        Ou acesse usando:<br>
+        <img class="icon" src="img/google.png" alt="Autenticação pelo Google" onclick="signInWithGoogle()">
+        <img class="icon" src="img/github.png" alt="Autenticação pelo GitHub" onclick="signInWithGitHub()">
+        <img class="icon" src="img/facebook.png" alt="Autenticação pelo Facebook" onclick="signInWithFacebook()">
+      </p>
+      <!--Fim dos outros provedores de autenticação-->
+    </div>
+
+    <!--Conteúdo destinado para usuários autenticados-->
+    <div id="userContent" class="startHidden">
+      <hr>
+      <div id="userInfo" class="center">
+        <img id="userImg">
+        <p id="userName"></p>
+        <p id="userEmail"></p>
+        <p id="emailVerified"></p>
+        
+        <div id="sendEmailVerificationDiv">
+          <button class="alternative" onclick="sendEmailVerification()">Verificar e-mail</button>
+        </div>
+
+        <br>
+        <button class="alternative" onclick="updateUserName()">Atualizar nome</button>
+        <button class="alternative" onclick="signOut()">Sair</button>
+        <button class="danger" onclick="deleteUserAccount()">Excluir conta</button>
+      </div>
+    </div>
+    <!--Fim do conteúdo destinado para usuários autenticados-->
+  </div>
+
+  <!--Recursos do Firebase-->
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
+
+  
+  <!--Nossa programação em JavaScript-->
+  <script src="js/firebase.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/todo.js"></script>
+</body>
+</html>
