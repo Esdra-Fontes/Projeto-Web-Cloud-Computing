@@ -27,20 +27,24 @@ Projeto-Web-Cloud-Computing/
 ├── .github/
 │   └── workflows/
 │       └── deploy-pages.yml – Workflow de deploy automático no GitHub Pages
+
 │
 ├── css/
 │   └── styles.css – Estilos da aplicação
+
 │
 ├── img/
 │   ├── myTasks.png
 │   ├── myTasksFavicon.png
 │   └── ... – Imagens e recursos visuais
+
 │
 ├── js/
 │   ├── firebase.js – Configuração e inicialização do Firebase
 │   ├── auth.js – Autenticação e gerenciamento de usuários
 │   ├── todo.js – Criação, edição, pesquisa e exclusão de tarefas
 │   └── utils.js – Funções auxiliares e manipulação da interface
+
 │
 ├── .firebaserc – Configuração do projeto Firebase
 ├── .gitignore – Arquivos e diretórios ignorados pelo Git
@@ -71,7 +75,7 @@ Projeto-Web-Cloud-Computing/
 - git clone https://github.com/Esdra-Fontes/Projeto-Web-Cloud-Computing.git
 2. Acesse a pasta do projeto:
 - cd Projeto-Web-Cloud-Computing
-3. Abra o projeto
+3. Abra o projeto:
 - Como a aplicação utiliza JavaScript e Firebase diretamente pelo navegador, não é necessário utilizar npm ou instalar dependências para executar a versão básica. Você pode utilizar uma extensão como Live Server no Visual Studio Code ou outro servidor local.
 - Acesse, por exemplo: http://127.0.0.1:5500/
 4. Acesse a aplicação publicada:
@@ -82,6 +86,7 @@ Projeto-Web-Cloud-Computing/
 Para executar uma instância própria da aplicação, é necessário configurar um projeto no Firebase e habilitar os seguintes serviços:
 - Firebase Authentication
 - Firebase Realtime Database
+
 Também é necessário configurar os domínios autorizados para autenticação, caso sejam utilizados provedores externos como Google, GitHub ou Facebook.
 A configuração do Firebase é realizada no arquivo: js/firebase.js
 
